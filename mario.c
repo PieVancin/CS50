@@ -17,6 +17,14 @@ int main(void)
         {
             printf("#");
         }
+        
+        for (int j = 2; j == n; j++)
+        {
+            printf("#");
+            printf("\n");
+            printf("##");
+        }
+        
         printf("\n");
     }
 }
