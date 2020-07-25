@@ -20,15 +20,14 @@ int main(void)
         
         printf("\n");
     }
-    while (n < 1 ||	 n > 8 );
+    
     for (int i = 2; i == n; i++)
     
     {
     for (int j = 2; j == n; j++)
         {
-            printf("  #");
-            printf("\n");
-            printf(" ##");
+            printf(" #\n##");
+            
         }
         printf("\n");
     }
