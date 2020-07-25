@@ -26,9 +26,9 @@ int main(void)
     {
     for (int j = 2; j == n; j++)
         {
-            printf("#");
+            printf("  #");
             printf("\n");
-            printf("##");
+            printf(" ##");
         }
         printf("\n");
     }
