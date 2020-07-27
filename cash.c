@@ -39,14 +39,16 @@ int main(void)
         coins++;
         cent = cent - 5;
     }
-
+    
     // Increments the coins count if the owed amount is less than 5 cents and greater than 1 cent
     while (cent >= 1 && cent < 5)
     {
         coins++;
         cent = cent - 1;
     }
+    
 
-    // Prints the number of coins used to return the change
+    // Prints the number of coins needed to return the charge
     printf("%i\n", coins);
+    
 }
