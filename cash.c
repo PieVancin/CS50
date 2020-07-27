@@ -3,52 +3,64 @@
 #include <math.h>
 
 int main(void)
+
 {
+    
     float dollar;
     int cent;
-
-    // Prompts the user to input the amount owed 
+    
+    // Prompts user to input the amount owed
+    
     do
     {
-        dollar = get_float("Change owed: ");
+        dollar = get_float("Change owed:");
         cent = round(dollar * 100);
+        
     }
     
-    while (dollar < 0.0);
-
-    // Initialize the number of coins
+    while (dollar < 0.00);
+    
     int coins = 0;
-
-    // Increments the coins count if the owed amount is greater than 25 cents
+    
+    // Adds up one coin if the owed amount is greater or equal to 25
+    
     while (cent >= 25)
     {
         coins++;
         cent = cent - 25;
     }
-
-    // Increments the coins count if the owed amount is less than 25 cents and greater than 10 cents
+    
+    // Adds up one coin if the owed amount is greater or equal to 10 and less than 25
+    
     while (cent >= 10 && cent < 25)
     {
         coins++;
         cent = cent - 10;
     }
-
-    // Increments the coins count if the owed amount is less than 10 cents and greater than 5 cents
+    
+    // Adds up one coin if the owed amount is greater or equal to 5 and less than 10
+    
     while (cent >= 5 && cent < 10)
     {
         coins++;
         cent = cent - 5;
+        
     }
     
-    // Increments the coins count if the owed amount is less than 5 cents and greater than 1 cent
+    // Adds up one coin if the owed amount is greater or equal to 1 and less than 5
+    
     while (cent >= 1 && cent < 5)
     {
         coins++;
         cent = cent - 1;
+        
     }
     
-
-    // Prints the number of coins needed to return the charge
+    // Print the amount of coins that will be given
+    
     printf("%i\n", coins);
+    
+        
+    
     
 }
