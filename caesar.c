@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     else
     {
         printf("Usage: ./caesar key\n");
-        return 0;
+        return 1;
     }
     
     for (int i = 0, n = strlen(s); i < n; i++)
