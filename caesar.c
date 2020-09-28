@@ -5,8 +5,17 @@
 
 int main(int argc, string argv[])
 {
-    string s = get_string("plaintext: ");
+    string s = 0;
+    if (argc == 2)
+    {
+    s = get_string("plaintext: ");
     printf("ciphertext:  ");
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 0;
+    }
     
     for (int i = 0, n = strlen(s); i < n; i++)
     {
