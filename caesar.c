@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 {
     string s = 0;
-    if (argc == 2)
+    if ((argc == 2) && (atoi(argv[1]) >=1 && atoi(argv[1]) <= 5000))
     {
     s = get_string("plaintext: ");
     printf("ciphertext:  ");
