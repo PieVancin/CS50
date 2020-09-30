@@ -6,7 +6,6 @@
 
 int main(int argc, string argv[])
 {
-    
     string s = 0; 
     if (argc == 2)
     {
@@ -40,5 +39,5 @@ int main(int argc, string argv[])
         }
     }
     printf("\n");
-    return 0;
+    
 }
