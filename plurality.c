@@ -18,13 +18,17 @@ candidate candidates[MAX];
 
 // Number of candidates
 int candidate_count;
+int argcc;
+
 
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
 
 int main(int argc, string argv[])
+
 {
+    argcc = argc;
     // Check for invalid usage
     if (argc < 2)
     {
@@ -68,18 +72,24 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].name == name)
-        candidates[i].votes ++;
+        if (strcmp(candidates[i].name, name) == 0)
+       { 
+        candidates[i].votes++;
         return true;
+       }
+        
         
     }
-    return false;
+    return false; 
+    
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    printf("%s", candidates[1].name);
+    printf("%d\n", candidates[1].votes);
+    printf("%s\n", candidates[1].name);
+    printf("%i\n", argcc);
     return;
 }
 
