@@ -156,6 +156,7 @@ bool print_winner(void)
             bool winner = true;
             printf("%s\n", candidates[j].name);
             return winner;
+            return true;
         }
     }
     return false;
