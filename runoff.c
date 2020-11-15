@@ -189,6 +189,7 @@ void eliminate(int min)
     //iterate through the candidates
     for (int i = 0; i < candidate_count; i++)
     {
+        //if the candidate is in the last place, eliminate
         if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
