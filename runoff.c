@@ -148,10 +148,11 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
+    //iterate through the candidates
     for (int i = 0; i < candidate_count; i++)
     {
         string majority = candidates[i].name;
-        if (candidates[i].votes > voter_count / 2)
+        if (candidates[i].votes > (voter_count / 2))
         {
             printf("%s\n", majority);
             return true;
@@ -170,8 +171,10 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
+    //iterate through the candidates
     for (int i = 0; i < candidate_count; i++)
     {
+        //check if the candidate is eliminated
         if (candidates[i].eliminated == false && candidates[i].votes != min)
         {
             return false;
@@ -183,6 +186,13 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    // TODO
+    //iterate through the candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
+        {
+            candidates[i].eliminated = true;
+        }
+    }
     return;
 }
