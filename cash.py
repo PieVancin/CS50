@@ -1,7 +1,7 @@
 from cs50 import get_float
 
-dollar=float
-cent=int
+dollar = float
+cent = int
 while(True):
     dollar = get_float("Change owed:")
     cent = round(dollar * 100)
@@ -20,7 +20,3 @@ while (cent >= 1 and cent < 5):
     coins+1
     cent = cent - 1
 print(coins, "coins in return")
-    
-        
-    
-    
