@@ -2,7 +2,7 @@ import cs50
 
 
 # inputs for the text
-text = cs50.get_string("Text: ");
+text = cs50.get_string("Text: ")
 
 letters = 0
 words = 0
@@ -12,13 +12,13 @@ words = 1
 for i in range(len(text)):
     # counts the letters
     if (text[i].isalpha()):
-        letters+=1
+        letters += 1
     # counts the words
     elif (text[i].isspace()):
-        words+=1
+        words += 1
     # counts the sentences
     elif (text[i] == '.' or text[i] == '!' or text[i] == '?'):
-        sentences+=1
+        sentences += 1
 # do the formula
 l = float(letters / words * 100)
 s = float(sentences / words * 100)
